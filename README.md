@@ -25,11 +25,13 @@ flask celery and beat
 
 ![image](https://user-images.githubusercontent.com/74556484/184596455-45b86630-aadd-4c5c-8295-dd88654336d9.png)
 
-* Script..
-celery -A app.celery flower --port=5555
+## Script..
+* celery -A app.celery worker --loglevel=info -l debug
 
-celery -A app.celery beat --loglevel=info -l debug
+* celery -A app.celery beat --loglevel=info -l debug
 
-celery -A app.celery worker --loglevel=info -l debug
+* celery -A app.celery beat -s /Users/tuantd/Coding/tuantd/flask-celery-beat/celerybeat-schedule --loglevel=INFO
 
-celery -A app.celery beat -s /Users/tuantd/Coding/tuantd/flask-celery-beat/celerybeat-schedule --loglevel=INFO
+* celery -A app.celery flower --port=5555
+
+## API
