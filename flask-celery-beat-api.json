@@ -1,0 +1,30 @@
+{
+	"info": {
+		"_postman_id": "dbdd1526-0c2a-441b-9d02-2c15fae95955",
+		"name": "flask-celery-beat",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "12572496"
+	},
+	"item": [
+		{
+			"name": "Get status task_id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/status/d60c0356-e49c-43b4-adba-22341d56e5c7",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"status",
+						"d60c0356-e49c-43b4-adba-22341d56e5c7"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

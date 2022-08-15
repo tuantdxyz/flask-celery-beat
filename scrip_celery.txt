@@ -2,7 +2,7 @@ celery --help
 
 celery worker --help
 
-### TUTORIAL CELERY ###
+### CELERY 4.x ###
 celery worker --app=app.celery --loglevel=info -l debug
 
 celery beat --app=app.celery --loglevel=debug -l debug
@@ -13,10 +13,12 @@ celery --app=app.celery status
 
 celery --app=app.celery inspect stats
 
-##############
-celery -A app.celery flower --port=5555
+############## celery 5.1.0 ##############
+celery -A app.celery worker --loglevel=info -l debug
 
 celery -A app.celery beat --loglevel=info -l debug
 
-celery -A app.celery worker --loglevel=info -l debug
+celery -A app.celery beat -s /Users/tuantd/Coding/tuantd/flask-celery-beat/celerybeat-schedule --loglevel=INFO
+
+celery -A app.celery flower --port=5555
 

@@ -138,10 +138,13 @@ def index():
         'message': content
     }
     if request.form['save'] == 'Send':
-        # send right away
+        # run process
+        # task = send_async_email(email_data)
+
+        # send right away, debug ok with delay
         task = send_async_email.delay(email_data)
     else:
-        # send in one minute
+        # send in one minute, not debug with apply_async
         task = send_async_email.apply_async(args=[email_data], countdown=60)
     flash('Sending email to {0} with id: {1}'.format(recipient, task.id))
     return redirect(url_for('index'))
@@ -149,6 +152,7 @@ def index():
 
 @app.route('/status/<task_id>', methods=['GET'])
 def task_status(task_id):
+    # TODO handle UI/UX (flow invoice)
     task_result = send_async_email.AsyncResult(task_id)
     result = {
         "task_id": task_id,
