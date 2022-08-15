@@ -34,4 +34,6 @@ flask celery and beat
 
 * celery -A app.celery flower --port=5555
 
-## API
+## TODO
+* Handle UI/UX get task_id
+* Handle evironment
