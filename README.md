@@ -11,7 +11,7 @@ flask celery and beat
 # Demo
 
 ## celery
-* run (app.py) --> http://localhost:5000/
+* run [app.py](app.py) --> http://localhost:5000/
 ![image](https://user-images.githubusercontent.com/74556484/184597081-b99f9e5f-08d2-46a2-9687-6d0b631e3344.png)
 
 ## schedule
