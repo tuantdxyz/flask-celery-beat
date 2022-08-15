@@ -36,4 +36,4 @@ flask celery and beat
 
 ## TODO
 * Handle UI/UX get task_id
-* Handle evironment
+* Handle environment
